@@ -62,7 +62,7 @@ docker exec -it spark-master /opt/spark/bin/spark-submit \
 
 ```
 
-![spark-submit](../screenShots/Capture%20d%E2%80%99%C3%A9cran%202025-12-05%20111144.png)
+![spark-submit](./screenShots/Capture%20d%E2%80%99%C3%A9cran%202025-12-05%20111144.png)
 
   
 
@@ -76,19 +76,19 @@ docker exec -it spark-master /opt/spark/bin/spark-submit \
 
 Batch 0 (orders1) :
 
-![Batch 0](../screenShots/Capture%20d%E2%80%99%C3%A9cran%202025-12-05%20111216.png)
+![Batch 0](./screenShots/Capture%20d%E2%80%99%C3%A9cran%202025-12-05%20111216.png)
 
   
 
 Batch 1 (orders2) :
 
-![Batch 1](../screenShots/Capture%20d%E2%80%99%C3%A9cran%202025-12-05%20111233.png)
+![Batch 1](./screenShots/Capture%20d%E2%80%99%C3%A9cran%202025-12-05%20111233.png)
 
   
 
 Batch 2 (orders3) :
 
-![Batch 2](../screenShots/Capture%20d%E2%80%99%C3%A9cran%202025-12-05%20111405.png)
+![Batch 2](./screenShots/Capture%20d%E2%80%99%C3%A9cran%202025-12-05%20111405.png)
 
   
 
@@ -96,7 +96,7 @@ Batch 2 (orders3) :
 
 Le job regroupe par `order_id` et calcule `sum(total)`. Résumé observé dans la console :
 
-![Sommes par order_id](../screenShots/Capture%20d%E2%80%99%C3%A9cran%202025-12-05%20113502.png)
+![Sommes par order_id](./screenShots/Capture%20d%E2%80%99%C3%A9cran%202025-12-05%20113502.png)
 
   
 
