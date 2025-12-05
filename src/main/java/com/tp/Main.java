@@ -32,7 +32,6 @@ public class Main {
         });
 
         Dataset<Row> inputDF = ss.readStream().schema(schema).option("header",true).csv("hdfs://namenode:8020/data");
-        inputDF.show();
         Dataset<Row> outputDF = inputDF.groupBy("order_id").sum("total");
         StreamingQuery query= outputDF.writeStream()
                 .format("console")
