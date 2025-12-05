@@ -1,5 +1,6 @@
 package com.tp;
 
+import org.apache.spark.internal.config.R;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
@@ -31,9 +32,11 @@ public class Main {
         });
 
         Dataset<Row> inputDF = ss.readStream().schema(schema).option("header",true).csv("hdfs://namenode:8020/data");
-
-        StreamingQuery query= inputDF.writeStream().format("console")
-                .outputMode(OutputMode.Append())
+        inputDF.show();
+        Dataset<Row> outputDF = inputDF.groupBy("order_id").sum("total");
+        StreamingQuery query= outputDF.writeStream()
+                .format("console")
+                .outputMode(OutputMode.Complete())
                 .start();
         query.awaitTermination();
 
